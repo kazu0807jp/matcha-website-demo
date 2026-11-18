@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>茶乃葉 | SANOHA TEA</title>
+
+<meta name="description" content="京都・宇治から、日本茶のある暮らしを。株式会社 茶乃葉の公式サイトです。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   基本設定
+========================= */
+
+:root {
+    --green: #263c31;
+    --green-light: #526b58;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --text: #333a34;
+    --gray: #777d76;
+    --gold: #b59b68;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-label {
+    color: var(--green-light);
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: var(--green);
+    margin-bottom: 24px;
+}
+
+.section-description {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 2.2;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 28px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--green);
+    color: white;
+}
+
+.button::after {
+    content: "→";
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(247,245,239,0.94);
+}
+
+.header-inner {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--green);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.logo small {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 12px;
+    color: var(--green);
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    opacity: 0.55;
+}
+
+.language-button {
+    border: 1px solid var(--green);
+    padding: 7px 13px;
+    background: transparent;
+    color: var(--green);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+   2回目の写真を使用
+========================= */
+
+.hero {
+    min-height: 720px;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15,30,22,0.62),
+            rgba(15,30,22,0.08)
+        ),
+        url('https://images.unsplash.com/photo-1756286477551-734d185a62de?auto=format&fit=crop&w=2400&q=85')
+        center / cover;
+}
+
+.hero-content {
+    width: min(1100px, 88%);
+    margin: auto;
+    color: white;
+    padding-top: 70px;
+}
+
+.hero-subtitle {
+    font-family: Georgia, serif;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 14px;
+    line-height: 2.2;
+    margin-bottom: 38px;
+}
+
+.hero .button {
+    color: white;
+    border-color: white;
+}
+
+.hero .button:hover {
+    background: white;
+    color: var(--green);
+}
+
+/* =========================
+   ABOUT
+   1回目の写真を使用
+========================= */
+
+.about {
+    background: var(--cream);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image img {
+    height: 480px;
+}
+
+.about-text {
+    padding: 20px 0;
+}
+
+.about-text p {
+    font-size: 14px;
+    line-height: 2.5;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+    background: #eeece4;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    padding-bottom: 28px;
+}
+
+.product-card img {
+    height: 280px;
+}
+
+.product-info {
+    padding: 24px;
+}
+
+.product-category {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--green);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.product-description {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.product-card .button {
+    width: 100%;
+    font-size: 11px;
+}
+
+/* =========================
+   CRAFT
+   1回目の写真を使用
+========================= */
+
+.craft {
+    background: var(--green);
+    color: white;
+}
+
+.craft-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.craft .section-label {
+    color: #c3ad7e;
+}
+
+.craft .section-title {
+    color: white;
+}
+
+.craft .section-description {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 30px;
+}
+
+.craft-image img {
+    height: 470px;
+}
+
+.craft .button {
+    color: white;
+    border-color: white;
+}
+
+.craft .button:hover {
+    background: white;
+    color: var(--green);
+}
+
+/* =========================
+   ACCESS
+========================= */
+
+.access {
+    background: var(--cream);
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.access-info {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 2.5;
+}
+
+.access-info strong {
+    color: var(--green);
+    display: inline-block;
+    min-width: 90px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 370px;
+    border: 0;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: var(--green);
+    border-bottom: 1px solid var(--green);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #1d3026;
+    color: white;
+    padding: 60px 0 25px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+
+.footer-logo small {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+}
+
+.footer-nav a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .header-inner {
+        min-height: 75px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        padding-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 650px;
+        height: 85vh;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .about-grid,
+    .craft-grid,
+    .access-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img,
+    .craft-image img {
+        height: 320px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-card img {
+        height: 260px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        gap: 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+    HEADER
+========================= -->
+
+<header>
+    <div class="header-inner">
+
+        <a href="#" class="logo">
+            茶乃葉
+            <small>SANOHA TEA</small>
+        </a>
+
+        <nav>
+            <a href="#about" data-ja="私たちについて" data-en="ABOUT">私たちについて</a>
+            <a href="#products" data-ja="商品紹介" data-en="PRODUCTS">商品紹介</a>
+            <a href="#craft" data-ja="こだわり" data-en="OUR CRAFT">こだわり</a>
+            <a href="#access" data-ja="アクセス" data-en="ACCESS">アクセス</a>
+
+            <button class="language-button" id="languageToggle">
+                ENGLISH
+            </button>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- =========================
+    HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">SANOHA TEA / KYOTO JAPAN</p>
+
+        <h1
+            data-ja="一杯のお茶に、<br>日本の美しさを。"
+            data-en="The Beauty of Japan,<br>In Every Cup."
+        >
+            一杯のお茶に、<br>
+            日本の美しさを。
+        </h1>
+
+        <p
+            class="hero-description"
+            data-ja="京都・宇治から、心を豊かにする日本茶を。<br>大切に育てた茶葉を、丁寧にお届けします。"
+            data-en="From Uji, Kyoto, we bring you Japanese tea<br>that enriches everyday life."
+        >
+            京都・宇治から、心を豊かにする日本茶を。<br>
+            大切に育てた茶葉を、丁寧にお届けします。
+        </p>
+
+        <a href="#products" class="button"
+           data-ja="商品を見る"
+           data-en="VIEW PRODUCTS">
+            商品を見る
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+    ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1000&q=85"
+                alt="日本茶の茶葉"
+            >
+
+        </div>
+
+        <div class="about-text">
+
+            <p class="section-label">ABOUT US</p>
+
+            <h2 class="section-title"
+                data-ja="お茶とともに、<br>豊かな時間を。"
+                data-en="A Richer Life,<br>With Japanese Tea."
+            >
+                お茶とともに、<br>
+                豊かな時間を。
+            </h2>
+
+            <p
+                data-ja="私たち茶乃葉は、京都・宇治の地から日本茶の魅力をお届けしています。<br><br>自然の恵みと、受け継がれてきた技術を大切に。一杯のお茶を通じて、日々の暮らしに安らぎを届けたいと考えています。"
+                data-en="SANOHA brings the beauty of Japanese tea from Uji, Kyoto.<br><br>We value nature's gifts and traditional craftsmanship. Through every cup, we hope to bring a moment of peace to your everyday life."
+            >
+                私たち茶乃葉は、京都・宇治の地から日本茶の魅力をお届けしています。
+                <br><br>
+                自然の恵みと、受け継がれてきた技術を大切に。
+                一杯のお茶を通じて、日々の暮らしに安らぎを届けたいと考えています。
+            </p>
+
+            <a href="#craft" class="button"
+               data-ja="詳しくはこちら"
+               data-en="LEARN MORE">
+                詳しくはこちら
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+    PRODUCTS
+========================= -->
+
+<section class="section products" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">OUR PRODUCTS</p>
+
+            <h2 class="section-title"
+                data-ja="商品紹介"
+                data-en="Our Products">
+                商品紹介
+            </h2>
+
+            <p class="section-description"
+               data-ja="日々の暮らしに寄り添う、こだわりの日本茶。"
+               data-en="Carefully selected Japanese tea for your everyday life.">
+                日々の暮らしに寄り添う、こだわりの日本茶。
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 1 : MATCHA -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=900&q=85"
+                    alt="抹茶"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">MATCHA</p>
+
+                    <h3 class="product-name"
+                        data-ja="宇治抹茶"
+                        data-en="Uji Matcha">
+                        宇治抹茶
+                    </h3>
+
+                    <p class="product-description"
+                       data-ja="豊かな香りと、まろやかな味わいを楽しめる宇治抹茶。"
+                       data-en="Enjoy the rich aroma and smooth taste of Uji Matcha.">
+                        豊かな香りと、まろやかな味わいを楽しめる宇治抹茶。
+                    </p>
+
+                    <p class="product-price">¥1,500（税込）</p>
+
+                    <a
+                        href="https://your-shop.thebase.in/items/ITEM001"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                        data-ja="BASEで購入する"
+                        data-en="BUY NOW">
+                        BASEで購入する
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 : SENCHA -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1767840272016-36dc5dd51f79?auto=format&fit=crop&w=900&q=85"
+                    alt="煎茶"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">SENCHA</p>
+
+                    <h3 class="product-name"
+                        data-ja="宇治煎茶"
+                        data-en="Uji Sencha">
+                        宇治煎茶
+                    </h3>
+
+                    <p class="product-description"
+                       data-ja="爽やかな香りと、すっきりとした後味が特徴の煎茶。"
+                       data-en="A refreshing aroma and a clean finish.">
+                        爽やかな香りと、すっきりとした後味が特徴の煎茶。
+                    </p>
+
+                    <p class="product-price">¥1,200（税込）</p>
+
+                    <a
+                        href="https://your-shop.thebase.in/items/ITEM002"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                        data-ja="BASEで購入する"
+                        data-en="BUY NOW">
+                        BASEで購入する
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 : HOJICHA -->
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1757507423608-ae47cddef75f?auto=format&fit=crop&w=900&q=85"
+                    alt="ほうじ茶"
+                >
+
+                <div class="product-info">
+
+                    <p class="product-category">HOJICHA</p>
+
+                    <h3 class="product-name"
+                        data-ja="宇治ほうじ茶"
+                        data-en="Uji Hojicha">
+                        宇治ほうじ茶
+                    </h3>
+
+                    <p class="product-description"
+                       data-ja="香ばしい香りと、やさしい味わいが広がるほうじ茶。"
+                       data-en="Enjoy the comforting roasted aroma and gentle taste.">
+                        香ばしい香りと、やさしい味わいが広がるほうじ茶。
+                    </p>
+
+                    <p class="product-price">¥1,000（税込）</p>
+
+                    <a
+                        href="https://your-shop.thebase.in/items/ITEM003"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                        data-ja="BASEで購入する"
+                        data-en="BUY NOW">
+                        BASEで購入する
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+    CRAFT
+========================= -->
+
+<section class="section craft" id="craft">
+
+    <div class="container craft-grid">
+
+        <div>
+
+            <p class="section-label">OUR CRAFT</p>
+
+            <h2 class="section-title"
+                data-ja="受け継がれる技と、<br>変わらない想い。"
+                data-en="Tradition and<br>Our Passion.">
+                受け継がれる技と、<br>
+                変わらない想い。
+            </h2>
+
+            <p class="section-description"
+               data-ja="おいしいお茶を届けるために、茶葉の選定から仕上げまで、一つひとつの工程を大切にしています。<br><br>伝統を守りながら、現代の暮らしに合ったお茶の楽しみ方を提案します。"
+               data-en="From selecting tea leaves to the final preparation, we value every step.<br><br>While preserving tradition, we introduce new ways to enjoy Japanese tea in modern life.">
+                おいしいお茶を届けるために、茶葉の選定から仕上げまで、一つひとつの工程を大切にしています。
+                <br><br>
+                伝統を守りながら、現代の暮らしに合ったお茶の楽しみ方を提案します。
+            </p>
+
+            <a href="#access" class="button"
+               data-ja="私たちについて"
+               data-en="ABOUT US">
+                私たちについて
+            </a>
+
+        </div>
+
+        <div class="craft-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1563911892437-1feda0179e1b?auto=format&fit=crop&w=1000&q=85"
+                alt="日本茶づくり"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+    ACCESS
+========================= -->
+
+<section class="section access" id="access">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">ACCESS</p>
+
+            <h2 class="section-title"
+                data-ja="アクセス"
+                data-en="Access">
+                アクセス
+            </h2>
+
+            <p class="section-description"
+               data-ja="京都・宇治から、日本茶の魅力をお届けします。"
+               data-en="Sharing the beauty of Japanese tea from Uji, Kyoto.">
+                京都・宇治から、日本茶の魅力をお届けします。
+            </p>
+
+        </div>
+
+
+        <div class="access-grid">
+
+            <div class="access-info">
+
+                <p>
+                    <strong data-ja="会社名" data-en="Company">
+                        会社名
+                    </strong>
+                    <span data-ja="株式会社 茶乃葉" data-en="SANOHA Co., Ltd.">株式会社 茶乃葉</span>
+                </p>
+
+                <p>
+                    <strong data-ja="所在地" data-en="Address">
+                        所在地
+                    </strong>
+                    <span data-ja="京都府宇治市宇治" data-en="Uji, Uji City, Kyoto, Japan">京都府宇治市宇治</span>
+                </p>
+
+                <p>
+                    <strong data-ja="営業時間" data-en="Opening Hours">
+                        営業時間
+                    </strong>
+                    <span data-ja="9:00〜17:00" data-en="9:00 am – 5:00 pm">9:00〜17:00</span>
+                </p>
+
+                <p>
+                    <strong data-ja="定休日" data-en="Closed">
+                        定休日
+                    </strong>
+                    <span data-ja="土日祝" data-en="Saturdays, Sundays and public holidays">土日祝</span>
+                </p>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=京都府宇治市宇治"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="map-link"
+                    data-ja="Google Mapsで見る →"
+                    data-en="View on Google Maps →">
+                    Google Mapsで見る →
+                </a>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=京都府宇治市宇治&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="茶乃葉 周辺地図">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+    FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-logo">
+                茶乃葉
+                <small>SANOHA TEA</small>
+            </div>
+
+            <div class="footer-nav">
+
+                <a href="#about"
+                   data-ja="私たちについて"
+                   data-en="ABOUT">
+                    私たちについて
+                </a>
+
+                <a href="#products"
+                   data-ja="商品紹介"
+                   data-en="PRODUCTS">
+                    商品紹介
+                </a>
+
+                <a href="#craft"
+                   data-ja="こだわり"
+                   data-en="OUR CRAFT">
+                    こだわり
+                </a>
+
+                <a href="#access"
+                   data-ja="アクセス"
+                   data-en="ACCESS">
+                    アクセス
+                </a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 SANOHA TEA. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+    LANGUAGE SWITCH
+========================= -->
+
+<script>
+
+const languageToggle = document.getElementById("languageToggle");
+
+let currentLanguage = "ja";
+
+function changeLanguage() {
+
+    currentLanguage = currentLanguage === "ja" ? "en" : "ja";
+
+    document.documentElement.lang = currentLanguage;
+
+    document.querySelectorAll("[data-ja]").forEach(element => {
+
+        element.innerHTML = element.getAttribute(
+            "data-" + currentLanguage
+        );
+
+    });
+
+    languageToggle.textContent =
+        currentLanguage === "ja" ? "ENGLISH" : "日本語";
+
+}
+
+languageToggle.addEventListener("click", changeLanguage);
+
+</script>
+
+</body>
+</html>
